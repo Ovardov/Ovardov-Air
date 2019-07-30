@@ -1,0 +1,15 @@
+.site {
+    max-width: var(--layout-main-width);
+}
+
+@media (min-width: 1024px) {
+
+    .site-header {
+        display: flex;
+    }
+
+    .site-nav {
+        margin-left: auto;
+    }
+
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{site.title}}</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/site.css">
+
+    <script src="{{ site.baseurl }}/scripts/app.js"></script>
+</head>
+<body>
+
+    <div class="site">
+
+        <header class="site-header">
+
+            {% if page.home == true %}
+            <h1 class="site-title">
+                <a href="{{ site.baseurl }}/">{{site.title}}</a>
+            </h1>
+            {% else %}
+            <p class="site-title">
+                <a href="{{ site.baseurl }}/">{{site.title}}</a>
+            </p>
+            {% endif %}
+
+           {% include navigation.html %}
+
+        </header>
+
+        <main class="site-main">
+
+            {% if page.title %}
+                <h1>{{page.title}}</h1>
+            {% endif %}
+
+            {{content}}
+
+        </main>
+
+        <aside class="site-sidebar">
+
+        </aside>
+
+        <footer class="site-footer">
+            <p>All rights reserved &copy; {{ site.title }}</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>

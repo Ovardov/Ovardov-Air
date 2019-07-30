@@ -1,0 +1,18 @@
+:root {
+    --font-size-body: 12px;
+    --font-size-body-larger: 14px;
+    --font-size-body-big: 16px;
+    --font-size-body-huge: 18px;
+
+    --font-main: 'Merriweather';
+    --font-headers: 'Barlow Condensed';
+
+    --layout-main-width: 100%;
+
+    --color-body-background: #FFFFFF;
+    --color-red-main: #AA3F44;
+    --color-beige-main: #D3C19F;
+    --color-beige-darker: #D3C19F;
+
+    --spacing-layout-elements: 2em;
+}
