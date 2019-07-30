@@ -2,6 +2,11 @@
     max-width: var(--layout-main-width);
 }
 
+.content-wrapper {
+    max-width: var(--layout-content-width);
+    margin: 0 auto;
+}
+
 @media (min-width: 1024px) {
 
     .site-header {

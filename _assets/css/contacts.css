@@ -1,0 +1,120 @@
+.info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5em;
+    padding: var(--spacing-layout-elements) 0;
+}
+
+.info h3 {
+    text-align: center;
+}
+
+.info li {
+    list-style: none outside;
+    margin-bottom: 1em;
+}
+
+/* Opening Hours */
+.opening-hours ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.opening-hours ul li .day {
+    width: 6em;
+}
+
+.opening-hours ul li .line {
+    display: inline-block;
+    width: 7em;
+    height: 2px;
+    background: var(--color-beige-main);
+    margin: 0 auto;
+}
+
+.opening-hours ul li .hours {
+
+}
+
+/* Central Office */
+.central-office {
+
+}
+
+.central-office ul {
+    text-align: center;
+}
+
+.central-office ul li {
+
+}
+
+.central-office ul li i {
+    display: inline-block;
+    width: 1.5em;
+    margin-right: 0.5em;
+    color: var(--color-beige-main);
+    text-align: center;
+}
+
+.central-office ul li address {
+    display: inline;
+}
+
+/* Media */
+.media {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 0.5em;
+}
+
+.media img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Form */
+.contact-us {
+    background: #F6F4EF;
+}
+
+.contact-us .content-wrapper {
+    padding: var(--spacing-layout-elements) 0;
+    text-align: center;
+}
+
+.contact-us .content-wrapper form {
+    max-width: 60%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: var(--spacing-layout-elements);
+}
+
+.contact-us form input:not([type="submit"]),
+.contact-us form textarea {
+    background: #FFFFFF;
+    padding: 1.1em 1.4em;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.contact-us form input {
+    border-radius: 4em;
+    grid-column: span 2;
+}
+
+.contact-us form textarea {
+    resize: none;
+    border-radius: 2em;
+    height: 10em;
+    grid-column: span 4;
+}
+
+.contact-us form input[type="submit"] {
+    grid-column: 2 / 4;
+}

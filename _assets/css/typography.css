@@ -8,7 +8,7 @@
 
 html {
     box-sizing: border-box;
-    font: var(--font-size-body, 14px)/1.5 var(--font-main), serif;
+    font: var(--font-size-body, 14px)/1.5 var(--font-main), sans-serif;
 }
 
 @media (min-width: 600px) {
@@ -23,13 +23,13 @@ html {
     }
 }
 
-@media (min-width: 1600px) {
-    html {
-        font-size: var(--font-size-body-huge, 20px);
-    }
-}
+/*@media (min-width: 1600px) {*/
+/*    html {*/
+/*        font-size: var(--font-size-body-huge, 20px);*/
+/*    }*/
+/*}*/
 
-body, input, textarea, option, select, table, form {
+body, input, textarea, option, select, table {
     font: inherit;
     background: var(--color-body-background, #FFFFFF);
     color: var(--color-body-text, #000000);
@@ -39,7 +39,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1em;
     font-weight: bold;
     line-height: 1.2;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
     font-family: var(--font-headers), sans-serif;
 }
 
@@ -74,10 +74,6 @@ a {
 
 p, blockquote, ul, ol {
     padding-bottom: 1.5em;
-}
-
-ul, ol {
-    padding-left: 2em;
 }
 
 blockquote {
