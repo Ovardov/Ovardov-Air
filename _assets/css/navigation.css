@@ -1,0 +1,25 @@
+.site-nav {
+    margin: 0 auto;
+}
+
+.site-nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.site-nav ul li {
+    display: block;
+    list-style: none outside;
+    padding: 0 1em;
+}
+
+.site-nav ul li a {
+    display: block;
+    color: #000000;
+}
+
+.site-nav ul li.selected > a,
+.site-nav ul li a:hover {
+    color: var(--color-beige-main);
+}

@@ -14,19 +14,16 @@
 
     <div class="site">
 
-        <header class="site-header">
+        <header class="site-header {% if page.home == true %} home-page {% endif %}">
 
-            {% if page.home == true %}
             <h1 class="site-title">
                 <a href="{{ site.baseurl }}/">{{site.title}}</a>
             </h1>
-            {% else %}
-            <p class="site-title">
-                <a href="{{ site.baseurl }}/">{{site.title}}</a>
-            </p>
-            {% endif %}
 
            {% include navigation.html %}
+
+            <a href="#" class="login-button"><i class="far fa-user"></i></a>
+            <a href="#" class="hamburger-menu"><i class="fas fa-bars"></i></a>
 
         </header>
 

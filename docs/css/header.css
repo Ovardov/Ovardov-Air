@@ -1,0 +1,28 @@
+.site-header {
+    background: var(--color-body-background);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10em;
+}
+
+.site-header.home-page {
+    background: transparent;
+}
+
+.site-title {
+    margin-bottom: 0;
+}
+
+.site-header a.login-button {
+    color: #000000;
+    font-size: 1.1em;
+}
+
+.site-header a.login-button:hover > i {
+    color: var(--color-beige-main);
+}
+
+.site-header a.hamburger-menu {
+    display: none;
+}
