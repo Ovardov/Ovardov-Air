@@ -22,7 +22,7 @@ gulp.task("jekylldev", function () {
 });
 
 gulp.task("jekyllprod", function () {
-    return cp.spawn("bundle", ["exec", "jekyll", "build --baseurl /Jekyll-Website-Custom-Theme"], {stdio: "inherit", shell: true});
+    return cp.spawn("bundle", ["exec", "jekyll", "build --baseurl /Ovardov-Air"], {stdio: "inherit", shell: true});
 });
 
 gulp.task("watch", function () {
