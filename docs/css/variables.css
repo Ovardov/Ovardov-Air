@@ -1,8 +1,8 @@
 :root {
-    --font-size-body: 12px;
-    --font-size-body-larger: 14px;
-    --font-size-body-big: 16px;
-    --font-size-body-huge: 18px;
+    --font-size-body: 14px;
+    --font-size-body-larger: 16px;
+    --font-size-body-big: 18px;
+    --font-size-body-huge: 20px;
 
     --font-main: 'Merriweather';
     --font-headers: 'Barlow Condensed';

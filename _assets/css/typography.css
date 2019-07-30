@@ -8,24 +8,24 @@
 
 html {
     box-sizing: border-box;
-    font: var(--font-size-body, 12px)/1.5 var(--font-main), serif;
+    font: var(--font-size-body, 14px)/1.5 var(--font-main), serif;
 }
 
 @media (min-width: 600px) {
     html {
-        font-size: var(--font-size-body-larger, 14px);
+        font-size: var(--font-size-body-larger, 16px);
     }
 }
 
 @media (min-width: 1024px) {
     html {
-        font-size: var(--font-size-body-big, 16px);
+        font-size: var(--font-size-body-big, 18px);
     }
 }
 
 @media (min-width: 1600px) {
     html {
-        font-size: var(--font-size-body-huge, 18px);
+        font-size: var(--font-size-body-huge, 20px);
     }
 }
 
