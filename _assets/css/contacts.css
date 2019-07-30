@@ -84,22 +84,11 @@
     grid-gap: var(--spacing-layout-elements);
 }
 
-.contact-us form input:not([type="submit"]),
-.contact-us form textarea {
-    background: #FFFFFF;
-    padding: 1.1em 1.4em;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-}
-
 .contact-us form input {
-    border-radius: 4em;
     grid-column: span 2;
 }
 
 .contact-us form textarea {
-    resize: none;
-    border-radius: 2em;
-    height: 10em;
     grid-column: span 4;
 }
 

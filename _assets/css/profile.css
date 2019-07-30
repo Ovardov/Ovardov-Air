@@ -1,0 +1,41 @@
+.profile {
+    background: #F6F4EF;
+}
+
+.profile .content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--spacing-layout-elements) 0;
+}
+
+.sign-in,
+.sign-up {
+    flex: 0 0 45%;
+}
+
+.sign-in h3,
+.sign-up h3 {
+    text-align: center;
+}
+
+.sign-in form,
+.sign-up form {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: var(--spacing-layout-elements);
+}
+
+.sign-in input {
+    grid-column: span 4;
+}
+
+.sign-up form {
+}
+
+.sign-up form input {
+    grid-column: span 2;
+}
+
+form input[type="submit"] {
+    grid-column: 2 / 4;
+}

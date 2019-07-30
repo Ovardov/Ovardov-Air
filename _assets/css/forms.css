@@ -1,0 +1,16 @@
+form input:not([type="submit"]),
+form textarea {
+    background: #FFFFFF;
+    padding: 1.1em 1.4em;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+form input {
+    border-radius: 4em;
+}
+
+form textarea {
+    resize: none;
+    border-radius: 2em;
+    height: 10em;
+}

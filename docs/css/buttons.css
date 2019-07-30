@@ -6,3 +6,9 @@ input[type="submit"] {
     cursor: pointer;
     box-shadow: 0 0 0.2em 0 rgba(0, 0, 0, 0.2);
 }
+
+input[type="submit"]:hover {
+    background: var(--color-red-main);
+    color: var(--color-body-background);
+    border-color: var(--color-red-main);
+}
