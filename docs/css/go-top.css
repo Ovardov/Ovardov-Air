@@ -1,0 +1,30 @@
+.go-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    background: var(--color-beige-main);
+    border-radius: 50%;
+    width: 5em;
+    height: 5em;
+    opacity: 0;
+}
+
+.go-top img {
+    margin-bottom: 0.5em;
+}
+
+.go-top span {
+    color: #000000;
+    text-transform: uppercase;
+    font-family: var(--font-headers);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.go-top:hover img {
+    padding-bottom: 0.5em;
+}
