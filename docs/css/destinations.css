@@ -1,6 +1,6 @@
 .destinations {
     display: grid;
-    grid-template-columns: repeat(3, 25%);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: var(--spacing-layout-elements);
     justify-content: center;
     padding: var(--spacing-layout-elements) 0;
@@ -22,6 +22,9 @@
 }
 
 .destinations li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     top: 0;
     left: 0;
@@ -37,4 +40,29 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.destinations li a:hover:before {
+    display: block;
+    content: '';
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 5;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.destinations li a:hover > .destination-name {
+    width: 100%;
+    text-align: center;
+    color: #FFFFFF;
+    z-index: 6;
+    position: absolute;
+    opacity: 1;
+    text-shadow: 0.1em 0.1em #000000;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
