@@ -1,0 +1,40 @@
+.destinations {
+    display: grid;
+    grid-template-columns: repeat(3, 25%);
+    grid-gap: var(--spacing-layout-elements);
+    justify-content: center;
+    padding: var(--spacing-layout-elements) 0;
+    margin: 0;
+}
+
+.destinations li {
+    list-style: none outside;
+    overflow: hidden;
+    position: relative;
+    border-radius: 0.5em;
+    box-shadow: 0 0 0.5em 0 rgba(0, 0, 0, 0.5);
+}
+
+.destinations li:before {
+    display: block;
+    content: '';
+    padding-top: 56.25%;
+}
+
+.destinations li a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.destinations li a img {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

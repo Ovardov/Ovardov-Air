@@ -1,0 +1,19 @@
+---
+layout: main
+title: Destinations
+permalink: /destinations/
+main-nav: 1
+---
+
+<div class="content-wrapper">
+    <ul class="destinations">
+        {% for destination in site.destinations %}
+        <li>
+            <a href="#">
+                {{ destination.title }}
+                <img src="{{site.baseurl}}{{destination.image}}" alt="{{destination.title}}">
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
