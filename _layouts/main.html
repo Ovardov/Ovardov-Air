@@ -21,7 +21,7 @@
 
            {% include navigation.html %}
 
-            <a href="{{ site.baseurl }}/profile" class="login-button"><i class="far fa-user"></i></a>
+            <a href="#" class="user-button"><i class="far fa-user"></i></a>
             <a href="#" class="hamburger-menu"><i class="fas fa-bars"></i></a>
 
         </header>
@@ -29,6 +29,8 @@
         <main class="site-main">
 
             {{content}}
+
+            {% include profile.html %}
 
             <a href="#" class="go-top">
                 <img src="../images/go-top.png" alt="Go Top">
@@ -49,5 +51,6 @@
 </body>
 
 <script src="{{ site.baseurl }}/scripts/app.js"></script>
+<script src="{{ site.baseurl }}/scripts/profile.js"></script>
 
 </html>

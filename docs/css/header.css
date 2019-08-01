@@ -16,12 +16,12 @@
     margin-bottom: 0;
 }
 
-.site-header a.login-button {
+.site-header a.user-button {
     color: #000000;
     font-size: 1.1em;
 }
 
-.site-header a.login-button:hover > i {
+.site-header a.user-button:hover > i {
     color: var(--color-beige-main);
 }
 

@@ -1,41 +1,74 @@
 .profile {
-    background: #F6F4EF;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #FFFFFF;
+    z-index: 100;
+    border-radius: 0.5em;
 }
 
-.profile .content-wrapper {
+.profile-buttons {
+    padding: 0 1em 0 0;
     display: flex;
-    justify-content: space-between;
-    padding: var(--spacing-layout-elements) 0;
+    align-items: center;
 }
 
-.sign-in,
+.profile-buttons a.clicked,
+.profile-buttons a:not(.close-button):hover {
+    background: var(--color-red-main);
+    color: var(--color-body-background);
+}
+
+.log-in-button {
+    border-top-left-radius: 0.5em;
+}
+
+.log-in-button,
+.sign-up-button {
+    margin-right: 0.5em;
+    padding: 0.5em 1.5em;
+    color: var(--color-red-main);
+}
+
+.profile-buttons .close-button {
+    margin-left: auto;
+    color: var(--color-red-main);
+    font-size: 1.2em;
+}
+
+.profile-forms {
+    padding: var(--spacing-layout-elements);
+}
+
 .sign-up {
-    flex: 0 0 45%;
+    display: none;
 }
 
-.sign-in h3,
-.sign-up h3 {
-    text-align: center;
-}
-
-.sign-in form,
-.sign-up form {
+.sign-up form,
+.log-in form {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
     grid-gap: var(--spacing-layout-elements);
 }
 
-.sign-in input {
-    grid-column: span 4;
+.sign-up form label,
+.log-in form label {
+    display: block;
+}
+
+.log-in form {
+    grid-template-columns: 1fr;
 }
 
 .sign-up form {
+    grid-template-columns: repeat(4, 1fr);
 }
 
-.sign-up form input {
+.sign-up form p {
     grid-column: span 2;
 }
 
-form input[type="submit"] {
+.sign-up form input[type='submit'] {
     grid-column: 2 / 4;
 }

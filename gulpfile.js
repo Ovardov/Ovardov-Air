@@ -40,7 +40,8 @@ gulp.task("watch", function () {
             "./*.html",
             "./_includes/*.html",
             "./_layouts/*.html",
-            "./_destinations/**/*.*"
+            "./_destinations/**/*.*",
+            "./scripts/*.js"
         ]
     ).on('change', gulp.series('jekylldev', 'css'));
 
