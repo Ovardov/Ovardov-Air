@@ -34,11 +34,15 @@
 }
 
 /* Central Office */
-.central-office ul {
+.central-office .contact-info {
     text-align: center;
 }
 
-.central-office ul li i {
+.central-office .contact-info li a {
+    color: #000000;
+}
+
+.central-office .contact-info li i {
     display: inline-block;
     width: 1.5em;
     margin-right: 0.5em;
@@ -46,8 +50,35 @@
     text-align: center;
 }
 
-.central-office ul li address {
+.central-office .contact-info li:hover i {
+    color: var(--color-red-main);
+}
+
+.central-office .contact-info li address {
     display: inline;
+}
+
+.central-office .social-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.central-office .social-buttons li {
+    background: var(--color-beige-main);
+    padding: 0.3em;
+    border-radius: 0.5em;
+}
+
+.central-office .social-buttons li a i {
+    width: 1.5em;
+    font-size: 1.5em;
+    text-align: center;
+    color: var(--color-body-background);
+    margin: 0;
+}
+
+.central-office .social-buttons li:hover {
+    background: var(--color-red-main);
 }
 
 /* Media */
