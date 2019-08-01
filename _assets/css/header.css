@@ -7,6 +7,14 @@
     margin-bottom: 1.5em;
 }
 
+.site-header.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 0 0.3em 0 var(--color-beige-main);
+}
+
 .site-header.home-page {
     background: transparent;
     margin-bottom: 0;
