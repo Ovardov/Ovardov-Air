@@ -6,7 +6,7 @@ goTopButton.addEventListener('click', goTop);
 window.addEventListener('scroll', showButtonAndStickyNav);
 
 function goTop() {
-    document.body.window.pageYOffset = 0;
+    document.body.pageYOffset = 0;
 }
 
 function showButtonAndStickyNav() {
