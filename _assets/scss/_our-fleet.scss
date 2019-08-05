@@ -7,7 +7,7 @@
     opacity: 0;
     transform: translateX(-10em);
 
-    animation: slideIn 0.5s ease-in;
+    animation: slideInHorizontal 0.5s ease-in;
     animation-fill-mode: forwards;
 
     &.slide-from-right {

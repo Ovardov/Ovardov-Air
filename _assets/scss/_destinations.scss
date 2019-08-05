@@ -5,64 +5,114 @@
     justify-content: center;
     padding: var(--spacing-layout-elements) 0;
     margin: 0;
+
+    & li {
+        list-style: none outside;
+        overflow: hidden;
+        position: relative;
+        border-radius: 0.5em;
+        box-shadow: 0 0 0.5em 0 rgba(0, 0, 0, 0.5);
+        animation: slideInVertical 0.5s ease-in-out;
+        animation-fill-mode: both;
+
+        &:before {
+            display: block;
+            content: '';
+            padding-top: 56.25%;
+        }
+
+        & a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+            &:hover:before {
+                display: block;
+                content: '';
+                background: rgba(0, 0, 0, 0.3);
+                z-index: 5;
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+            }
+
+            &:hover > .destination-name {
+                width: 100%;
+                text-align: center;
+                color: #FFFFFF;
+                z-index: 6;
+                position: absolute;
+                opacity: 1;
+                text-shadow: 0.1em 0.1em #000000;
+                font-size: 1.3em;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+            }
+
+            & img {
+                display: block;
+                width: 100%;
+                height: auto;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
 }
 
-.destinations li {
-    list-style: none outside;
-    overflow: hidden;
-    position: relative;
-    border-radius: 0.5em;
-    box-shadow: 0 0 0.5em 0 rgba(0, 0, 0, 0.5);
+.destinations li:nth-child(1) {
+    animation-delay: 0.1s;
 }
 
-.destinations li:before {
-    display: block;
-    content: '';
-    padding-top: 56.25%;
+.destinations li:nth-child(2),
+.destinations li:nth-child(4) {
+    animation-delay: 0.4s;
 }
 
-.destinations li a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+.destinations li:nth-child(3),
+.destinations li:nth-child(5),
+.destinations li:nth-child(7) {
+    animation-delay: 0.7s;
 }
 
-.destinations li a img {
-    display: block;
-    width: 100%;
-    height: auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.destinations li:nth-child(6),
+.destinations li:nth-child(8),
+.destinations li:nth-child(10) {
+    animation-delay: 1s;
 }
 
-.destinations li a:hover:before {
-    display: block;
-    content: '';
-    background: rgba(0, 0, 0, 0.3);
-    z-index: 5;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+.destinations li:nth-child(9),
+.destinations li:nth-child(11),
+.destinations li:nth-child(13) {
+    animation-delay: 1.3s;
 }
 
-.destinations li a:hover > .destination-name {
-    width: 100%;
-    text-align: center;
-    color: #FFFFFF;
-    z-index: 6;
-    position: absolute;
-    opacity: 1;
-    text-shadow: 0.1em 0.1em #000000;
-    font-size: 1.3em;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+.destinations li:nth-child(12),
+.destinations li:nth-child(14),
+.destinations li:nth-child(16) {
+    animation-delay: 1.6s;
+}
+
+.destinations li:nth-child(15),
+.destinations li:nth-child(17),
+.destinations li:nth-child(19) {
+    animation-delay: 1.9s;
+}
+
+.destinations li:nth-child(18),
+.destinations li:nth-child(20) {
+    animation-delay: 2.2s;
+}
+
+.destinations li:nth-child(21) {
+    animation-delay: 2.5s;
 }

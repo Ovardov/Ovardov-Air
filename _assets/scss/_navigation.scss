@@ -23,3 +23,20 @@
 .site-nav ul li a:hover {
     color: var(--color-beige-main);
 }
+
+.site-nav ul li a:after {
+    display: block;
+    content: '';
+    height: 0.2em;
+    width: 0;
+}
+
+.site-nav ul li.selected > a:after,
+.site-nav ul li a:hover:after {
+    width: 100%;
+}
+
+.site-nav ul li.selected > a:after,
+.site-nav ul li a:hover:after {
+    background: var(--color-beige-main);
+}
