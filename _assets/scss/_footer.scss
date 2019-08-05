@@ -3,12 +3,12 @@
     background: var(--color-red-main);
     color: var(--color-body-background);
     text-align: center;
-}
 
-.site-footer p {
-    padding: 0;
-}
+    & p {
+        padding: 0;
+    }
 
-.site-footer .title {
-    color: var(--color-beige-main);
+    & .title {
+        color: var(--color-beige-main);
+    }
 }
