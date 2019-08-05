@@ -3,10 +3,14 @@
 }
 
 input[type="submit"] {
-    transition: all 0.3s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
 .central-office li,
 .central-office .contact-info li i {
+    transition: all 0.5s ease-in-out;
+}
+
+.profile-buttons a {
     transition: all 0.5s ease-in-out;
 }
