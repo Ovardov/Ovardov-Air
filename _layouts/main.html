@@ -11,42 +11,42 @@
 </head>
 <body>
 
-    <div class="site">
+<div class="site">
 
-        <header class="site-header {% if page.home == true %} home-page {% endif %}">
+    <header class="site-header {% if page.home == true %} home-page {% endif %}">
 
-            <h1 class="site-title">
-                <a href="{{ site.baseurl }}/">{{site.title}}</a>
-            </h1>
+        <h1 class="site-title">
+            <a href="{{ site.baseurl }}/">{{site.title}}</a>
+        </h1>
 
-           {% include navigation.html %}
+        {% include navigation.html %}
 
-            <a href="#" class="user-button"><i class="far fa-user"></i></a>
-            <a href="#" class="hamburger-menu"><i class="fas fa-bars"></i></a>
+        <a href="#" class="user-button"><i class="far fa-user"></i></a>
+        <a href="#" class="hamburger-menu"><i class="fas fa-bars"></i></a>
 
-        </header>
+    </header>
 
-        <main class="site-main">
+    <main class="site-main">
 
-            {{content}}
+        {{content}}
 
-            {% include profile.html %}
+        {% include profile.html %}
 
-            <a href="#" class="go-top">
-                <img src="../images/go-top.png" alt="Go Top">
-                <span>Go Top</span>
-            </a>
-        </main>
+        <a href="#" class="go-top">
+            <img src="../images/go-top.png" alt="Go Top">
+            <span>Go Top</span>
+        </a>
+    </main>
 
-        <aside class="site-sidebar">
+    <aside class="site-sidebar">
 
-        </aside>
+    </aside>
 
-        <footer class="site-footer">
-            <p>All rights reserved &copy; <a href="{{ site.baseurl }}" class="title">{{ site.title }}</a></p>
-        </footer>
+    <footer class="site-footer">
+        <p>All rights reserved &copy; <a href="{{ site.baseurl }}" class="title">{{ site.title }}</a></p>
+    </footer>
 
-    </div>
+</div>
 
 </body>
 

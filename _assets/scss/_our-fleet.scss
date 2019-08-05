@@ -7,16 +7,16 @@
     opacity: 0;
     transform: translateX(-10em);
 
-    animation: slideInHorizontal 0.5s ease-in;
+    animation: slideInHorizontal 0.5s linear;
     animation-fill-mode: forwards;
 
     &.slide-from-right {
         transform: translateX(10em);
     }
 
-    @for $i from 1 through 7 {
+    @for $i from 2 through 7 {
         &:nth-of-type(#{$i}) {
-            animation-delay: $i * 0.5s;
+            animation-delay: $i * 0.3s;
         }
     }
 }
