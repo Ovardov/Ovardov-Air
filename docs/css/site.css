@@ -372,7 +372,36 @@ form textarea {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 4em; }
+  margin-bottom: 4em;
+  opacity: 0;
+  transform: translateX(-10em);
+  -webkit-animation: slideIn 0.5s ease-in;
+          animation: slideIn 0.5s ease-in;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }
+  .fleet-card.slide-from-right {
+    transform: translateX(10em); }
+  .fleet-card:nth-of-type(1) {
+    -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s; }
+  .fleet-card:nth-of-type(2) {
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s; }
+  .fleet-card:nth-of-type(3) {
+    -webkit-animation-delay: 1.5s;
+            animation-delay: 1.5s; }
+  .fleet-card:nth-of-type(4) {
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s; }
+  .fleet-card:nth-of-type(5) {
+    -webkit-animation-delay: 2.5s;
+            animation-delay: 2.5s; }
+  .fleet-card:nth-of-type(6) {
+    -webkit-animation-delay: 3s;
+            animation-delay: 3s; }
+  .fleet-card:nth-of-type(7) {
+    -webkit-animation-delay: 3.5s;
+            animation-delay: 3.5s; }
 
 .fleet-card .media img,
 .fleet-card .description {
@@ -501,3 +530,15 @@ form textarea {
 
 .go-top:hover img {
   padding-bottom: 0.5em; }
+
+@-webkit-keyframes slideIn {
+  from { }
+  to {
+    transform: translateX(0);
+    opacity: 1; } }
+
+@keyframes slideIn {
+  from { }
+  to {
+    transform: translateX(0);
+    opacity: 1; } }
