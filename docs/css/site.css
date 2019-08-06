@@ -117,7 +117,8 @@ input[type="submit"]:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.8); }
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000; }
 
 .content-wrapper {
   max-width: var(--layout-content-width);
@@ -287,6 +288,32 @@ input[type="submit"]:hover {
   font-size: 2em;
   margin-bottom: 0.5em;
   color: var(--color-beige-main); }
+
+.newsletter {
+  background: var(--color-red-main);
+  color: var(--color-body-background); }
+
+.newsletter .content-wrapper {
+  padding: var(--spacing-layout-elements) 0;
+  display: flex;
+  align-items: center; }
+
+.newsletter h3 {
+  margin-bottom: 0; }
+
+.newsletter form {
+  margin-left: auto; }
+
+.newsletter form input[type="submit"] {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  color: var(--color-body-background); }
+
+.newsletter form input[type="submit"]:hover {
+  transform: translate(1em, -1em);
+  color: var(--color-body-background);
+  background: var(--color-beige-main);
+  border-color: var(--color-beige-main); }
 
 .faq {
   padding: var(--spacing-layout-elements) 0; }
@@ -477,7 +504,7 @@ form textarea {
   left: 50%;
   transform: translate(-50%, -50%);
   background: #FFFFFF;
-  z-index: 100;
+  z-index: 2000;
   border-radius: 0.5em; }
 
 .profile-buttons {
