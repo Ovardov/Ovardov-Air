@@ -44,6 +44,17 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.services-info ul li:hover {
+    background: var(--color-red-main);
+    color: var(--color-body-background);
+}
+
+.services-info ul li:hover i {
+    color: var(--color-body-background);
 }
 
 .services-info ul li h5 {
@@ -64,7 +75,7 @@
 .all-workers {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: var(--spacing-layout-elements);
+    grid-gap: 3em;
 }
 
 .worker {
@@ -96,4 +107,42 @@
 
 .worker .worker-position {
     color: var(--color-red-main);
+    padding-bottom: 0;
+}
+
+// Testimonials
+.testimonials {
+    padding: var(--spacing-layout-elements) 0;
+    background: #F6F4EF;
+}
+
+.testimonials .all-testimonials {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: var(--spacing-layout-elements);
+}
+
+.testimonials-card {
+    border: 1px solid var(--color-red-main);
+    border-radius: 0.5em;
+    overflow: hidden;
+    text-align: left;
+    background: var(--color-body-background);
+}
+
+.testimonials-card header {
+    width: 100%;
+    padding: 1.5em 2em;
+    border-bottom: 1px solid var(--color-red-main);
+    text-align: center;
+    background: var(--color-red-main);
+    color: var(--color-body-background);
+}
+
+.testimonials-card header .author {
+    margin-bottom: 0;
+}
+
+.testimonials-card .content {
+    padding: 1em 2em;
 }
