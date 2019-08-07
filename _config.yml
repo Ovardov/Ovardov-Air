@@ -24,6 +24,8 @@ github_username:  Ovardov
 collections:
   destinations:
     output: true
+  team:
+    output: true
 
 # Build settings
 future: true

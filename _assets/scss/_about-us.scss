@@ -55,3 +55,45 @@
     margin-bottom: 0.5em;
     color: var(--color-beige-main);
 }
+
+// Team
+.team {
+    padding: var(--spacing-layout-elements) 0;
+}
+
+.all-workers {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: var(--spacing-layout-elements);
+}
+
+.worker {
+    grid-column: span 1;
+    position: relative;
+}
+
+.worker .media {
+    width: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: border-radius 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.worker .media:hover {
+    border-radius: 0;
+}
+
+.worker .media img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.worker .worker-name {
+    margin-bottom: 0.2em;
+}
+
+.worker .worker-position {
+    color: var(--color-red-main);
+}

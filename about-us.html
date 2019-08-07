@@ -53,3 +53,27 @@ main-nav: 1
     </div>
 </section>
 
+<!-- Team -->
+<section class="team">
+    <div class="content-wrapper">
+        <header>
+            <h3>Team</h3>
+        </header>
+
+        <section class="all-workers">
+            {% for worker in site.team %}
+                <section class="worker">
+                    <div class="media">
+                        <img src="{{ worker.image }}" alt="{{ worker.title }}">
+                    </div>
+
+                    <header>
+                        <h4 class="worker-name">{{ worker.title }}</h4>
+                    </header>
+
+                    <p class="worker-position">{{ worker.position}}</p>
+                </section>
+            {% endfor %}
+        </section>
+    </div>
+</section>
