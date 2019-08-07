@@ -3,6 +3,14 @@ form textarea {
     background: #FFFFFF;
     padding: 1.1em 1.4em;
     border: 1px solid rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+form input:not([type="submit"]):focus,
+form textarea:focus,
+form input:not([type="submit"]):hover,
+form textarea:hover {
+    border-color: var(--color-red-main);
 }
 
 form input {

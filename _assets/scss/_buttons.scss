@@ -9,8 +9,11 @@ input[type="submit"] {
     box-shadow: 0 0 0.2em 0 rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease-in-out;
     font-family: var(--font-main);
+    outline: none;
 }
 
+button:focus,
+input[type="submit"]:focus,
 button:hover,
 input[type="submit"]:hover {
     background: var(--color-red-main);
