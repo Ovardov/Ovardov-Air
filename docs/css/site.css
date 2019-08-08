@@ -369,20 +369,20 @@ form textarea {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: var(--spacing-layout-elements); }
     .services .services-info .media,
-    .services .services-info ul li {
+    .services .services-info .service {
       border-radius: 0.5em; }
     .services .services-info .media {
       overflow: hidden; }
       .services .services-info .media img {
         width: 100%;
         display: block; }
-    .services .services-info ul {
+    .services .services-info .services-list {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(2, 1fr);
       grid-gap: var(--spacing-layout-elements);
       padding-bottom: 0; }
-      .services .services-info ul li {
+      .services .services-info .services-list .service {
         list-style: none outside;
         background: var(--color-body-background);
         font-family: var(--font-headers);
@@ -391,17 +391,31 @@ form textarea {
         flex-direction: column;
         justify-content: center;
         cursor: pointer; }
-        .services .services-info ul li:hover {
+        .services .services-info .services-list .service:nth-of-type(2) .service-name:before {
+          content: '\f5af'; }
+        .services .services-info .services-list .service:nth-of-type(3) .service-name:before {
+          content: '\f274'; }
+        .services .services-info .services-list .service:nth-of-type(4) .service-name:before {
+          content: '\f2f2'; }
+        .services .services-info .services-list .service:nth-of-type(5) .service-name:before {
+          content: '\f594'; }
+        .services .services-info .services-list .service:nth-of-type(6) .service-name:before {
+          content: '\f5e4'; }
+        .services .services-info .services-list .service .service-name {
+          margin-bottom: 0; }
+          .services .services-info .services-list .service .service-name:before {
+            display: block;
+            content: '\f479';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            font-size: 1.7em;
+            margin-bottom: 0.4em;
+            color: var(--color-beige-main); }
+        .services .services-info .services-list .service:hover {
           background: var(--color-red-main);
           color: var(--color-body-background); }
-          .services .services-info ul li:hover i {
+          .services .services-info .services-list .service:hover .service-name:before {
             color: var(--color-body-background); }
-        .services .services-info ul li i {
-          font-size: 2em;
-          margin-bottom: 0.5em;
-          color: var(--color-beige-main); }
-        .services .services-info ul li h5 {
-          margin-bottom: 0; }
 
 .team {
   padding: var(--spacing-layout-elements) 0; }
@@ -812,7 +826,7 @@ input[type="submit"] {
 .profile-buttons a {
   transition: all 0.5s ease-in-out; }
 
-.services-info ul li {
+.service {
   transition: all 0.3s ease-in-out; }
 
 .contact-info li a i,

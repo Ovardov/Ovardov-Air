@@ -13,7 +13,7 @@
         grid-gap: var(--spacing-layout-elements);
 
         & .media,
-        & ul li {
+        & .service {
             border-radius: 0.5em;
         }
 
@@ -26,14 +26,14 @@
             }
         }
 
-        & ul {
+        & .services-list {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(2, 1fr);
             grid-gap: var(--spacing-layout-elements);
             padding-bottom: 0;
 
-            & li {
+            & .service {
                 list-style: none outside;
                 background: var(--color-body-background);
                 font-family: var(--font-headers);
@@ -43,23 +43,47 @@
                 justify-content: center;
                 cursor: pointer;
 
+                &:nth-of-type(2) .service-name:before {
+                    content: '\f5af';
+                }
+
+                &:nth-of-type(3) .service-name:before {
+                    content: '\f274';
+                }
+
+                &:nth-of-type(4) .service-name:before {
+                    content: '\f2f2';
+                }
+
+                &:nth-of-type(5) .service-name:before {
+                    content: '\f594';
+                }
+
+                &:nth-of-type(6) .service-name:before {
+                    content: '\f5e4';
+                }
+
+                & .service-name {
+                    margin-bottom: 0;
+
+                    &:before {
+                        display: block;
+                        content: '\f479';
+                        font-family: 'Font Awesome 5 Free';
+                        font-weight: 900;
+                        font-size: 1.7em;
+                        margin-bottom: 0.4em;
+                        color: var(--color-beige-main);
+                    }
+                }
+
                 &:hover {
                     background: var(--color-red-main);
                     color: var(--color-body-background);
 
-                    & i {
+                    & .service-name:before {
                         color: var(--color-body-background);
                     }
-                }
-
-                & i {
-                    font-size: 2em;
-                    margin-bottom: 0.5em;
-                    color: var(--color-beige-main);
-                }
-
-                & h5 {
-                    margin-bottom: 0;
                 }
             }
         }
