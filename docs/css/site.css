@@ -130,23 +130,27 @@ form textarea {
   .site .content-wrapper {
     max-width: var(--layout-content-width);
     margin: 0 auto; }
+    @media (max-width: 1023px) {
+      .site .content-wrapper {
+        max-width: 100%;
+        padding: 0 2em; } }
 
 .site-header {
   background: var(--color-body-background);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5em 5em;
+  padding: 0.5em 10em;
   margin-bottom: 1.5em; }
-  @media (min-width: 1600px) {
+  @media (min-width: 1024px) and (max-width: 1599px) {
     .site-header {
-      padding: 0.5em 10em; } }
+      padding: 0.5em 5em; } }
   .site-header.fixed {
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 100;
-    box-shadow: 0 0 0.3em 0 var(--color-beige-main); }
+    box-shadow: 0 0 0.1em 0.1em var(--color-beige-main); }
   .site-header.home-page {
     margin-bottom: 0; }
   .site-header .site-title {
@@ -286,6 +290,15 @@ form textarea {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: var(--spacing-layout-elements); }
+    @media (min-width: 1024px) and (max-width: 1599px) {
+      .popular-destinations .flight-wrapper {
+        grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 1023px) {
+      .popular-destinations .flight-wrapper {
+        grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 650px) {
+      .popular-destinations .flight-wrapper {
+        grid-template-columns: 1fr; } }
     .popular-destinations .flight-wrapper .flight-card {
       border-radius: 0.5em;
       border: 1px solid var(--color-beige-main);
@@ -348,10 +361,20 @@ form textarea {
     padding: var(--spacing-layout-elements) 0;
     display: flex;
     align-items: center; }
+    @media (max-width: 1023px) {
+      .newsletter .content-wrapper {
+        padding: var(--spacing-layout-elements) 2em;
+        flex-direction: column; } }
     .newsletter .content-wrapper h3 {
       margin-bottom: 0; }
+      @media (max-width: 1023px) {
+        .newsletter .content-wrapper h3 {
+          margin-bottom: 1em; } }
     .newsletter .content-wrapper form {
       margin-left: auto; }
+      @media (max-width: 1023px) {
+        .newsletter .content-wrapper form {
+          margin-left: 0; } }
       .newsletter .content-wrapper form input[type="submit"] {
         font-family: 'Font Awesome 5 Free';
         font-weight: 900;
@@ -369,6 +392,9 @@ form textarea {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: var(--spacing-layout-elements);
     padding-bottom: 0; }
+    @media (max-width: 1023px) {
+      .faq .questions-list {
+        grid-template-columns: 1fr; } }
     .faq .questions-list .question-and-answer {
       list-style: none outside;
       background: #F6F4EF;
