@@ -1,5 +1,6 @@
 .site-nav {
     margin: 0 auto;
+    grid-column: 2 / span 3;
 
     & ul {
         display: flex;

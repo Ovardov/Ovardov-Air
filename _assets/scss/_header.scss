@@ -3,8 +3,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5em 10em;
+    padding: 0.5em 5em;
     margin-bottom: 1.5em;
+
+    @include bp(desktop-large) {
+        padding: 0.5em 10em;
+    }
 
     &.fixed {
         position: fixed;
@@ -20,18 +24,111 @@
 
     & .site-title {
         margin-bottom: 0;
+        text-align: left;
     }
 
-    & .user-button {
-        color: #000000;
+    & .header-buttons {
         font-size: 1.1em;
+        text-align: right;
 
-        &:hover > i {
-            color: var(--color-beige-main);
+        & > a {
+            color: #000000;
+        }
+
+        & .user-button {
+            margin-right: 1em;
+
+            &:hover > i {
+                color: var(--color-beige-main);
+            }
+        }
+
+        & .hamburger-menu-button i {
+            display: none;
+            cursor: pointer;
+
+            &:hover {
+                color: var(--color-beige-main);
+            }
         }
     }
+}
 
-    & .hamburger-menu {
-        display: none;
+.hamburger-menu-input {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @include bp(tablet) {
+
+        & + .site-header {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            padding: 0.5em 3em;
+
+            & .site-title {
+                grid-column: span 2;
+            }
+
+            & .site-nav,
+            & .site-nav ul,
+            & .site-nav li {
+                width: 100%;
+            }
+
+            & .site-nav {
+                display: none;
+                margin-top: 1em;
+                grid-column: 1 / -1;
+                grid-row: 2;
+                text-align: center;
+
+                & ul {
+                    flex-direction: column;
+
+                    & li {
+                        padding: 0.5em;
+                    }
+                }
+            }
+
+            & .header-buttons {
+                grid-column: 3;
+
+                & .hamburger-menu-button .fa-bars {
+                    display: inline-block;
+                }
+            }
+        }
+
+        &:checked + .site-header {
+
+            & .site-nav {
+                display: block;
+
+                & li.selected {
+                    background: var(--color-beige-main);
+                    border-radius: 0.5em;
+
+                    & a {
+                        color: #000000;
+                    }
+                }
+            }
+
+            & .hamburger-menu-button {
+
+                & .fa-bars {
+                    display: none;
+                }
+
+                & .fa-times {
+                    display: inline-block;
+                    color: var(--color-red-main);
+                }
+            }
+        }
     }
 }
