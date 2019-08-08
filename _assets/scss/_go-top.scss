@@ -12,20 +12,20 @@
     height: 5em;
     opacity: 0;
     z-index: 10;
-}
 
-.go-top img {
-    margin-bottom: 0.5em;
-}
+    &:hover img {
+        padding-bottom: 0.5em;
+    }
 
-.go-top span {
-    color: #000000;
-    text-transform: uppercase;
-    font-family: var(--font-headers);
-    font-weight: 700;
-    letter-spacing: 0.05em;
-}
+    & img {
+        margin-bottom: 0.5em;
+    }
 
-.go-top:hover img {
-    padding-bottom: 0.5em;
+    & span {
+        color: #000000;
+        text-transform: uppercase;
+        font-family: var(--font-headers);
+        font-weight: 700;
+        letter-spacing: 0.05em;
+    }
 }

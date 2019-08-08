@@ -15,6 +15,54 @@
         animation: slideInVertical 0.5s ease-in-out;
         animation-fill-mode: both;
 
+        &:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        &:nth-child(2),
+        &:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        &:nth-child(3),
+        &:nth-child(5),
+        &:nth-child(7) {
+            animation-delay: 0.7s;
+        }
+
+        &:nth-child(6),
+        &:nth-child(8),
+        &:nth-child(10) {
+            animation-delay: 1s;
+        }
+
+        &:nth-child(9),
+        &:nth-child(11),
+        &:nth-child(13) {
+            animation-delay: 1.3s;
+        }
+
+        &:nth-child(12),
+        &:nth-child(14),
+        &:nth-child(16) {
+            animation-delay: 1.6s;
+        }
+
+        &:nth-child(15),
+        &:nth-child(17),
+        &:nth-child(19) {
+            animation-delay: 1.9s;
+        }
+
+        &:nth-child(18),
+        &:nth-child(20) {
+            animation-delay: 2.2s;
+        }
+
+        &:nth-child(21) {
+            animation-delay: 2.5s;
+        }
+
         &:before {
             display: block;
             content: '';
@@ -67,52 +115,4 @@
             }
         }
     }
-}
-
-.destinations li:nth-child(1) {
-    animation-delay: 0.1s;
-}
-
-.destinations li:nth-child(2),
-.destinations li:nth-child(4) {
-    animation-delay: 0.4s;
-}
-
-.destinations li:nth-child(3),
-.destinations li:nth-child(5),
-.destinations li:nth-child(7) {
-    animation-delay: 0.7s;
-}
-
-.destinations li:nth-child(6),
-.destinations li:nth-child(8),
-.destinations li:nth-child(10) {
-    animation-delay: 1s;
-}
-
-.destinations li:nth-child(9),
-.destinations li:nth-child(11),
-.destinations li:nth-child(13) {
-    animation-delay: 1.3s;
-}
-
-.destinations li:nth-child(12),
-.destinations li:nth-child(14),
-.destinations li:nth-child(16) {
-    animation-delay: 1.6s;
-}
-
-.destinations li:nth-child(15),
-.destinations li:nth-child(17),
-.destinations li:nth-child(19) {
-    animation-delay: 1.9s;
-}
-
-.destinations li:nth-child(18),
-.destinations li:nth-child(20) {
-    animation-delay: 2.2s;
-}
-
-.destinations li:nth-child(21) {
-    animation-delay: 2.5s;
 }

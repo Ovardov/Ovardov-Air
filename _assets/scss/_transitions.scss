@@ -6,11 +6,27 @@ input[type="submit"] {
     transition: all 0.5s ease-in-out;
 }
 
-.central-office li,
-.central-office .contact-info li i {
+.profile-buttons a {
     transition: all 0.5s ease-in-out;
 }
 
-.profile-buttons a {
-    transition: all 0.5s ease-in-out;
+.services-info ul li {
+    transition: all 0.3s ease-in-out;
+}
+
+.contact-info li a i,
+.social-buttons li {
+    transition: all 0.3s ease-in-out;
+}
+
+.worker .media {
+    transition: border-radius 0.3s ease-in-out;
+}
+
+.flight-card .book-now {
+    transition: all 0.3s ease-in-out;
+}
+
+.questions-list .question-and-answer {
+    transition: all 0.3s ease-in-out;
 }

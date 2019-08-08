@@ -7,69 +7,68 @@
     background: #FFFFFF;
     z-index: 2000;
     border-radius: 0.5em;
-}
 
-.profile-buttons {
-    padding: 0 1em 0 0;
-    display: flex;
-    align-items: center;
-}
+    & .profile-buttons {
+        padding: 0 1em 0 0;
+        display: flex;
+        align-items: center;
 
-.profile-buttons a.clicked,
-.profile-buttons a:not(.close-button):hover {
-    background: var(--color-red-main);
-    color: var(--color-body-background);
-}
+        & a.clicked,
+        & a:not(.close-button):hover {
+            background: var(--color-red-main);
+            color: var(--color-body-background);
+        }
 
-.log-in-button {
-    border-top-left-radius: 0.5em;
-}
+        & .log-in-button {
+            border-top-left-radius: 0.5em;
+        }
 
-.log-in-button,
-.sign-up-button {
-    margin-right: 0.5em;
-    padding: 0.5em 1.5em;
-    color: var(--color-red-main);
-}
+        & .log-in-button,
+        & .sign-up-button {
+            margin-right: 0.5em;
+            padding: 0.5em 1.5em;
+            color: var(--color-red-main);
+        }
 
-.profile-buttons .close-button {
-    margin-left: auto;
-    color: var(--color-red-main);
-    font-size: 1.2em;
-}
+        & .close-button {
+            margin-left: auto;
+            color: var(--color-red-main);
+            font-size: 1.2em;
+        }
+    }
 
-.profile-forms {
-    padding: var(--spacing-layout-elements);
-}
+    & .profile-forms {
+        padding: var(--spacing-layout-elements);
 
-.sign-up {
-    display: none;
-}
+        & .sign-up form,
+        & .log-in form {
+            display: grid;
+            grid-gap: var(--spacing-layout-elements);
 
-.sign-up form,
-.log-in form {
-    display: grid;
-    grid-gap: var(--spacing-layout-elements);
-}
+            & label {
+                display: block;
+                margin-left: 1.4em;
+            }
+        }
 
-.sign-up form label,
-.log-in form label {
-    display: block;
-    margin-left: 1.4em;
-}
+        & .log-in form {
+            grid-template-columns: 1fr;
+        }
 
-.log-in form {
-    grid-template-columns: 1fr;
-}
+        & .sign-up {
+            display: none;
 
-.sign-up form {
-    grid-template-columns: repeat(4, 1fr);
-}
+            & form {
+                grid-template-columns: repeat(4, 1fr);
 
-.sign-up form p {
-    grid-column: span 2;
-}
+                & p {
+                    grid-column: span 2;
+                }
 
-.sign-up form input[type='submit'] {
-    grid-column: 2 / 4;
+                & input[type='submit'] {
+                    grid-column: 2 / 4;
+                }
+            }
+        }
+    }
 }

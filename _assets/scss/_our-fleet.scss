@@ -3,10 +3,8 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 4em;
-
     opacity: 0;
     transform: translateX(-10em);
-
     animation: slideInHorizontal 0.5s linear;
     animation-fill-mode: forwards;
 
@@ -19,52 +17,51 @@
             animation-delay: $i * 0.3s;
         }
     }
-}
 
+    & .media,
+    & .description {
+        box-shadow: 0 0 0.2em 0 rgba(0, 0, 0, 0.2);
+        border-radius: 0.3em;
+    }
 
-.fleet-card .media img,
-.fleet-card .description {
-    box-shadow: 0 0 0.2em 0 rgba(0, 0, 0, 0.2);
-    border-radius: 0.3em;
-}
+    & .media {
+        width: 30em;
+        position: relative;
+        overflow: hidden;
 
-.fleet-card .media {
-    width: 30em;
-    position: relative;
-    overflow: hidden;
-}
+        &:before {
+            display: block;
+            content: '';
+            padding-top: 56.25%;
+        }
 
-.fleet-card .media:before {
-    display: block;
-    content: '';
-    padding-top: 56.25%;
-}
+        & img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+    }
 
-.fleet-card .media img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
+    & .description {
+        width: 25em;
+        padding: 2em;
 
-.fleet-card .description {
-    width: 25em;
-    padding: 2em;
-}
+        & .airplane-name {
+            color: var(--color-beige-main);
+            margin-bottom: 0.5em;
+        }
 
-.fleet-card .description .airplane-name {
-    color: var(--color-beige-main);
-    margin-bottom: 0.5em;
-}
+        & .airplane-info {
+            padding-bottom: 0;
+        }
+    }
 
-.fleet-card:nth-child(even) .description .airplane-name {
-    color: var(--color-red-main);
-}
-
-.fleet-card .description .airplane-info {
-    padding-bottom: 0;
+    &:nth-child(even) .description .airplane-name {
+        color: var(--color-red-main);
+    }
 }

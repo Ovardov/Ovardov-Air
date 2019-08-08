@@ -5,33 +5,33 @@
     align-items: center;
     padding: 0.5em 10em;
     margin-bottom: 1.5em;
-}
 
-.site-header.fixed {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 100;
-    box-shadow: 0 0 0.3em 0 var(--color-beige-main);
-}
+    &.fixed {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 100;
+        box-shadow: 0 0 0.3em 0 var(--color-beige-main);
+    }
 
-.site-header.home-page {
-    margin-bottom: 0;
-}
+    &.home-page {
+        margin-bottom: 0;
+    }
 
-.site-title {
-    margin-bottom: 0;
-}
+    & .site-title {
+        margin-bottom: 0;
+    }
 
-.site-header a.user-button {
-    color: #000000;
-    font-size: 1.1em;
-}
+    & .user-button {
+        color: #000000;
+        font-size: 1.1em;
 
-.site-header a.user-button:hover > i {
-    color: var(--color-beige-main);
-}
+        &:hover > i {
+            color: var(--color-beige-main);
+        }
+    }
 
-.site-header a.hamburger-menu {
-    display: none;
+    & .hamburger-menu {
+        display: none;
+    }
 }

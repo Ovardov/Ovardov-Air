@@ -5,9 +5,9 @@ goTopButton.addEventListener('click', goTop);
 
 window.addEventListener('scroll', showButtonAndStickyNav);
 
-let allQuestionsElements = document.querySelectorAll('.questions-wrapper');
+let allQuestionsAndAnswers = document.querySelectorAll('.question-and-answer');
 
-allQuestionsElements.forEach(questionWrapper => questionWrapper.addEventListener('click', showOrHideAnswer));
+allQuestionsAndAnswers.forEach(questionAndAnswer => questionAndAnswer.addEventListener('click', showOrHideAnswer));
 
 function goTop() {
     document.body.pageYOffset = 0;
@@ -24,11 +24,11 @@ function showButtonAndStickyNav() {
 }
 
 function showOrHideAnswer() {
-    let questionWrapper = event.target;
+    let questionAndAnswer = event.target;
 
-    if(questionWrapper.classList.contains('active')) {
-        questionWrapper.classList.remove('active');
+    if(questionAndAnswer.classList.contains('active')) {
+        questionAndAnswer.classList.remove('active');
     } else {
-        questionWrapper.classList.add('active');
+        questionAndAnswer.classList.add('active');
     }
 }
