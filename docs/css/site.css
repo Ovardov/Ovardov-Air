@@ -1031,20 +1031,40 @@ form textarea {
     .profile .profile-forms .log-in form {
       display: grid;
       grid-gap: var(--spacing-layout-elements); }
-      .profile .profile-forms .sign-up form label,
-      .profile .profile-forms .log-in form label {
-        display: block;
-        margin-left: 1.4em; }
+      .profile .profile-forms .sign-up form p,
+      .profile .profile-forms .log-in form p {
+        padding-bottom: 0; }
+        .profile .profile-forms .sign-up form p label,
+        .profile .profile-forms .log-in form p label {
+          display: block;
+          margin-left: 1.4em; }
     .profile .profile-forms .log-in form {
       grid-template-columns: 1fr; }
     .profile .profile-forms .sign-up {
       display: none; }
       .profile .profile-forms .sign-up form {
-        grid-template-columns: repeat(4, 1fr); }
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: var(--spacing-layout-elements); }
+        @media (max-width: 1023px) {
+          .profile .profile-forms .sign-up form {
+            grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 650px) {
+          .profile .profile-forms .sign-up form {
+            grid-template-columns: 1fr;
+            grid-gap: 1em; } }
         .profile .profile-forms .sign-up form p {
           grid-column: span 2; }
+          @media (max-width: 1023px) {
+            .profile .profile-forms .sign-up form p {
+              grid-column: span 1; } }
         .profile .profile-forms .sign-up form input[type='submit'] {
           grid-column: 2 / 4; }
+          @media (max-width: 1023px) {
+            .profile .profile-forms .sign-up form input[type='submit'] {
+              grid-column: 1 / -1; } }
+          @media (max-width: 650px) {
+            .profile .profile-forms .sign-up form input[type='submit'] {
+              grid-column: 1; } }
 
 .go-top {
   display: flex;

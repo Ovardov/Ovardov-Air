@@ -45,9 +45,13 @@
             display: grid;
             grid-gap: var(--spacing-layout-elements);
 
-            & label {
-                display: block;
-                margin-left: 1.4em;
+            & p {
+                padding-bottom: 0;
+
+                & label {
+                    display: block;
+                    margin-left: 1.4em;
+                }
             }
         }
 
@@ -60,13 +64,35 @@
 
             & form {
                 grid-template-columns: repeat(4, 1fr);
+                grid-gap: var(--spacing-layout-elements);
+
+                @include bp(tablet) {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+
+                @include bp(phone) {
+                    grid-template-columns: 1fr;
+                    grid-gap: 1em;
+                }
 
                 & p {
                     grid-column: span 2;
+
+                    @include bp(tablet) {
+                        grid-column: span 1;
+                    }
                 }
 
                 & input[type='submit'] {
                     grid-column: 2 / 4;
+
+                    @include bp(tablet) {
+                        grid-column: 1 / -1;
+                    }
+
+                    @include bp(phone) {
+                        grid-column: 1;
+                    }
                 }
             }
         }
