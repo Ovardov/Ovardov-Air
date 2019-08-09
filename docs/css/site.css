@@ -594,6 +594,20 @@ form textarea {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 5em;
   padding: var(--spacing-layout-elements) 0; }
+  @media (min-width: 1024px) and (max-width: 1799px) {
+    .info {
+      grid-gap: var(--spacing-layout-elements); }
+      .site.contact-us-page .content-wrapper {
+        max-width: 100%;
+        padding: 0 3em; } }
+  @media (max-width: 1023px) {
+    .info {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 1fr);
+      grid-gap: var(--spacing-layout-elements); } }
+  @media (max-width: 650px) {
+    .info {
+      grid-template-rows: 1fr; } }
   .info header h3 {
     text-align: center; }
   .info li {
@@ -605,6 +619,12 @@ form textarea {
   display: flex;
   align-items: center;
   justify-content: space-between; }
+  @media (max-width: 1023px) {
+    .opening-hours ul li {
+      justify-content: space-evenly; } }
+  @media (max-width: 650px) {
+    .opening-hours ul li {
+      justify-content: space-between; } }
   .opening-hours ul li .day {
     width: 6em; }
   .opening-hours ul li .line {
@@ -613,6 +633,15 @@ form textarea {
     height: 2px;
     background: var(--color-beige-main);
     margin: 0 auto; }
+    @media (min-width: 1024px) and (max-width: 1799px) {
+      .opening-hours ul li .line {
+        width: 3em; } }
+    @media (max-width: 1023px) {
+      .opening-hours ul li .line {
+        margin: 0; } }
+    @media (max-width: 650px) {
+      .opening-hours ul li .line {
+        width: 4em; } }
 
 /* Central Office */
 .central-office .contact-info {
@@ -633,6 +662,12 @@ form textarea {
 .central-office .social-buttons {
   display: flex;
   justify-content: space-around; }
+  @media (max-width: 1023px) {
+    .central-office .social-buttons {
+      justify-content: space-evenly; } }
+  @media (max-width: 650px) {
+    .central-office .social-buttons {
+      justify-content: space-between; } }
   .central-office .social-buttons li {
     background: var(--color-beige-main);
     padding: 0.3em;
@@ -653,6 +688,9 @@ form textarea {
   height: 100%;
   overflow: hidden;
   border-radius: 0.5em; }
+  @media (max-width: 650px) {
+    .info .media {
+      display: none; } }
   .info .media img {
     position: absolute;
     top: 50%;
@@ -661,9 +699,9 @@ form textarea {
 
 /* Form */
 .contact-us {
-  background: #F6F4EF; }
+  background: #F6F4EF;
+  padding: var(--spacing-layout-elements) 0; }
   .contact-us .content-wrapper {
-    padding: var(--spacing-layout-elements) 0;
     text-align: center; }
     .contact-us .content-wrapper form {
       max-width: 60%;
@@ -671,6 +709,9 @@ form textarea {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       grid-gap: var(--spacing-layout-elements); }
+      @media (max-width: 1023px) {
+        .contact-us .content-wrapper form {
+          max-width: 100%; } }
       .contact-us .content-wrapper form input {
         grid-column: span 2; }
         .contact-us .content-wrapper form input[type="submit"] {

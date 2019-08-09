@@ -4,6 +4,25 @@
     grid-gap: 5em;
     padding: var(--spacing-layout-elements) 0;
 
+    @include bp(desktop) {
+        grid-gap: var(--spacing-layout-elements);
+
+        @at-root .site.contact-us-page .content-wrapper {
+            max-width: 100%;
+            padding: 0 3em;
+        }
+    }
+
+    @include bp(tablet) {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: var(--spacing-layout-elements);
+    }
+
+    @include bp(phone) {
+        grid-template-rows: 1fr;
+    }
+
     & header h3 {
         text-align: center;
     }
@@ -20,6 +39,14 @@
     align-items: center;
     justify-content: space-between;
 
+    @include bp(tablet) {
+        justify-content: space-evenly;
+    }
+
+    @include bp(phone) {
+        justify-content: space-between;
+    }
+
     & .day {
         width: 6em;
     }
@@ -30,6 +57,18 @@
         height: 2px;
         background: var(--color-beige-main);
         margin: 0 auto;
+
+        @include bp(desktop) {
+            width: 3em;
+        }
+
+        @include bp(tablet) {
+            margin: 0;
+        }
+
+        @include bp(phone) {
+            width: 4em;
+        }
     }
 }
 
@@ -64,6 +103,14 @@
         display: flex;
         justify-content: space-around;
 
+        @include bp(tablet) {
+            justify-content: space-evenly;
+        }
+
+        @include bp(phone) {
+            justify-content: space-between;
+        }
+
         & li {
             background: var(--color-beige-main);
             padding: 0.3em;
@@ -92,6 +139,10 @@
     overflow: hidden;
     border-radius: 0.5em;
 
+    @include bp(phone) {
+        display: none;
+    }
+
     & img {
         position: absolute;
         top: 50%;
@@ -103,9 +154,9 @@
 /* Form */
 .contact-us {
     background: #F6F4EF;
+    padding: var(--spacing-layout-elements) 0;
 
     & .content-wrapper {
-        padding: var(--spacing-layout-elements) 0;
         text-align: center;
 
         & form {
@@ -114,6 +165,10 @@
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             grid-gap: var(--spacing-layout-elements);
+
+            @include bp(tablet) {
+                max-width: 100%;
+            }
 
             & input {
                 grid-column: span 2;
