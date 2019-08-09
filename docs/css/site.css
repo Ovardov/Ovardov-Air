@@ -1031,6 +1031,10 @@ form textarea {
     .profile .profile-forms .log-in form {
       display: grid;
       grid-gap: var(--spacing-layout-elements); }
+      @media (max-width: 650px) {
+        .profile .profile-forms .sign-up form,
+        .profile .profile-forms .log-in form {
+          grid-gap: 1em; } }
       .profile .profile-forms .sign-up form p,
       .profile .profile-forms .log-in form p {
         padding-bottom: 0; }
@@ -1043,22 +1047,29 @@ form textarea {
     .profile .profile-forms .sign-up {
       display: none; }
       .profile .profile-forms .sign-up form {
-        grid-template-columns: repeat(4, 1fr);
-        grid-gap: var(--spacing-layout-elements); }
+        grid-template-columns: repeat(4, 1fr); }
+        @media (min-width: 1024px) and (max-width: 1799px) {
+          .profile .profile-forms .sign-up form {
+            grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 1023px) {
           .profile .profile-forms .sign-up form {
             grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 650px) {
           .profile .profile-forms .sign-up form {
-            grid-template-columns: 1fr;
-            grid-gap: 1em; } }
+            grid-template-columns: 1fr; } }
         .profile .profile-forms .sign-up form p {
           grid-column: span 2; }
+          @media (min-width: 1024px) and (max-width: 1799px) {
+            .profile .profile-forms .sign-up form p {
+              grid-column: span 1; } }
           @media (max-width: 1023px) {
             .profile .profile-forms .sign-up form p {
               grid-column: span 1; } }
         .profile .profile-forms .sign-up form input[type='submit'] {
           grid-column: 2 / 4; }
+          @media (min-width: 1024px) and (max-width: 1799px) {
+            .profile .profile-forms .sign-up form input[type='submit'] {
+              grid-column: 1 / -1; } }
           @media (max-width: 1023px) {
             .profile .profile-forms .sign-up form input[type='submit'] {
               grid-column: 1 / -1; } }
