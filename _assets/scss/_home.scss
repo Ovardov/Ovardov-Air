@@ -6,6 +6,14 @@
     position: relative;
     overflow-x: hidden;
 
+    @include bp(tablet) {
+        height: 80vh;
+    }
+
+    @include bp(phone) {
+        height: 60vh;
+    }
+
     & .clouds img,
     & .fog img,
     & .wing img {
@@ -21,6 +29,10 @@
         max-height: 100vh;
         animation: slideInMain 5s linear infinite;
         animation-fill-mode: both;
+
+        @include bp(tablet) {
+            width: 250%;
+        }
     }
 
     & .clouds img {

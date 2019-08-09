@@ -256,6 +256,12 @@ form textarea {
   width: 100%;
   position: relative;
   overflow-x: hidden; }
+  @media (max-width: 1023px) {
+    .sky {
+      height: 80vh; } }
+  @media (max-width: 650px) {
+    .sky {
+      height: 60vh; } }
   .sky .clouds img,
   .sky .fog img,
   .sky .wing img {
@@ -271,6 +277,10 @@ form textarea {
             animation: slideInMain 5s linear infinite;
     -webkit-animation-fill-mode: both;
             animation-fill-mode: both; }
+    @media (max-width: 1023px) {
+      .sky .clouds img,
+      .sky .fog img {
+        width: 250%; } }
   .sky .clouds img {
     z-index: 1; }
   .sky .fog img {
@@ -450,6 +460,10 @@ form textarea {
 .services {
   padding: var(--spacing-layout-elements) 0;
   background: #F6F4EF; }
+  @media (min-width: 1024px) and (max-width: 1799px) {
+    .services .content-wrapper {
+      max-width: 100%;
+      padding: 0 2em; } }
   .services .services-info {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -465,16 +479,28 @@ form textarea {
     .services .services-info .service {
       border-radius: 0.5em; }
     .services .services-info .media {
-      overflow: hidden; }
+      overflow: hidden;
+      grid-column: 1;
+      position: relative; }
+      .services .services-info .media:before {
+        display: block;
+        content: '';
+        padding-top: 56.25%; }
+      .services .services-info .media img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0; }
       @media (max-width: 1023px) {
         .services .services-info .media {
           grid-column: 1 / -1; } }
       @media (max-width: 650px) {
         .services .services-info .media {
           grid-row: 1; } }
-      .services .services-info .media img {
-        width: 100%;
-        display: block; }
     .services .services-info .services-list {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -588,6 +614,11 @@ form textarea {
           margin-bottom: 0; }
       .testimonials .all-testimonials .testimonials-card .content {
         padding: 1em 2em; }
+
+@media (min-width: 1024px) and (max-width: 1799px) {
+  .contact-us-description .content-wrapper {
+    max-width: 100%;
+    padding: 0 2em; } }
 
 .info {
   display: grid;

@@ -1,3 +1,15 @@
+.contact-us-description {
+
+    & .content-wrapper {
+
+        @include bp(desktop) {
+            max-width: 100%;
+            padding: 0 2em;
+        }
+    }
+}
+
+
 .info {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
