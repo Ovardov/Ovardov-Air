@@ -726,15 +726,33 @@ form textarea {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 4em;
   opacity: 0;
   transform: translateX(-10em);
   -webkit-animation: slideInHorizontal 0.5s linear;
           animation: slideInHorizontal 0.5s linear;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards; }
+  .fleet-card:not(:last-child) {
+    margin-bottom: 4em; }
+  @media (max-width: 1023px) {
+    .fleet-card {
+      flex-direction: column; } }
   .fleet-card.slide-from-right {
     transform: translateX(10em); }
+    @media (max-width: 1023px) {
+      .fleet-card.slide-from-right .media {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0; }
+      .fleet-card.slide-from-right .description {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0; } }
+  @media (max-width: 1023px) {
+    .fleet-card.slide-from-left .description {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0; }
+    .fleet-card.slide-from-left .media {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0; } }
   .fleet-card:nth-of-type(2) {
     -webkit-animation-delay: 0.6s;
             animation-delay: 0.6s; }
@@ -761,6 +779,9 @@ form textarea {
     width: 30em;
     position: relative;
     overflow: hidden; }
+    @media (max-width: 1023px) {
+      .fleet-card .media {
+        width: 100%; } }
     .fleet-card .media:before {
       display: block;
       content: '';
@@ -777,6 +798,9 @@ form textarea {
   .fleet-card .description {
     width: 25em;
     padding: 2em; }
+    @media (max-width: 1023px) {
+      .fleet-card .description {
+        width: 100%; } }
     .fleet-card .description .airplane-name {
       color: var(--color-beige-main);
       margin-bottom: 0.5em; }
