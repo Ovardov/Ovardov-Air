@@ -573,7 +573,7 @@ form textarea {
         overflow: hidden;
         cursor: pointer; }
         .team .all-workers .worker .media:hover {
-          border-radius: 0; }
+          border-radius: 1em; }
         .team .all-workers .worker .media img {
           display: block;
           width: 100%;
