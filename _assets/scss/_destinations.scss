@@ -6,6 +6,14 @@
     padding: var(--spacing-layout-elements) 0;
     margin: 0;
 
+    @include bp(tablet) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include bp(phone) {
+        grid-template-columns: 1fr;
+    }
+
     & li {
         list-style: none outside;
         overflow: hidden;
@@ -67,6 +75,15 @@
             display: block;
             content: '';
             padding-top: 56.25%;
+        }
+
+        @include bp(tablet) {
+
+            @for $i from 1 through 21 {
+                &:nth-of-type(#{$i}) {
+                    animation-delay: $i * 0.1s;
+                }
+            }
         }
 
         & a {
