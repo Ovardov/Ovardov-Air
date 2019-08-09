@@ -162,6 +162,10 @@
             flex-direction: column;
         }
 
+        @include bp(phone) {
+            padding: var(--spacing-layout-elements) 1em;
+        }
+
         & h3 {
             margin-bottom: 0;
 
@@ -175,6 +179,13 @@
 
             @include bp(tablet) {
                 margin-left: 0;
+            }
+
+            & input[type="email"] {
+
+                @include bp(phone) {
+                    width: 70%;
+                }
             }
 
             & input[type="submit"] {
