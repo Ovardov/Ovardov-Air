@@ -52,7 +52,7 @@
 
     @for $i from 2 through 7 {
         &:nth-of-type(#{$i}) {
-            animation-delay: $i * 0.3s;
+            animation-delay: $i * 0.2s;
         }
     }
 
