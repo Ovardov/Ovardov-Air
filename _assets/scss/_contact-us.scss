@@ -184,6 +184,7 @@
 
             & input {
                 grid-column: span 2;
+                width: 100%;
 
                 &[type="submit"] {
                     grid-column: 2 / 4;

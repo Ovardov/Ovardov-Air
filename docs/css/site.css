@@ -744,7 +744,8 @@ form textarea {
         .contact-us .content-wrapper form {
           max-width: 100%; } }
       .contact-us .content-wrapper form input {
-        grid-column: span 2; }
+        grid-column: span 2;
+        width: 100%; }
         .contact-us .content-wrapper form input[type="submit"] {
           grid-column: 2 / 4; }
       .contact-us .content-wrapper form textarea {
