@@ -673,6 +673,8 @@ form textarea {
     @media (max-width: 650px) {
       .opening-hours ul li .line {
         width: 4em; } }
+  .opening-hours ul li .hours {
+    width: 7em; }
 
 /* Central Office */
 .central-office .contact-info {
